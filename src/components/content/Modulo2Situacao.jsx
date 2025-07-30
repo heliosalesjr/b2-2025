@@ -7,7 +7,7 @@ import { useSidebar } from '@/contexts/SidebarContext';
 import { FaPlus, FaArrowLeft } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const Modulo1Situacao = () => {
+const Modulo2Situacao = () => {
 
   const ref = useRef();
   const { markAsViewed } = useSidebar();
@@ -51,13 +51,13 @@ const Modulo1Situacao = () => {
               transition={{ duration: 1 }}
             >
               <Image
-                src="/sad.webp"
+                src="/proj1.jpg"
                 alt="Aprendizagem baseada em projetos"
                 fill
                 className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-black/50 z-10" />
+              <div className="absolute inset-0 bg-blue-500/20 z-10" />
             </motion.div>
 
             <motion.div
@@ -69,7 +69,7 @@ const Modulo1Situacao = () => {
             >
               <div className="max-w-3xl">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                A situação e a importância da educação financeira na sala de aula
+                Roteiro para elaboração do PPDA e PDA
                 </h2>
                 
               </div>
@@ -91,11 +91,9 @@ const Modulo1Situacao = () => {
             <div className="max-w-3xl">
 
               <p className="text-base md:text-lg font-medium text-white pb-8">
-                Investir em educação financeira é crucial, especialmente em um contexto como o do Brasil, onde a população enfrenta desafios significativos relacionados ao endividamento e à falta de planejamento financeiro. De acordo com dados recentes do Serasa, cerca de 74 milhões de brasileiros estavam inadimplentes em dezembro de 2024, o que representa um número alarmante de consumidores com contas em atraso. 
+                Como vimos no módulo 1, o programa de educação financeira Aprendendo a Lidar com dinheiro, propõe que os(as) educadores(as) trabalhem os conteúdos do Livro do Estudante por meio da Aprendizagem Baseada em Projetos, realizando atividades de curta duração que são chamados de PEQUENOS PROJETOS DIDÁTICOS ATIVOS (PPDAs) e objetivando desenvolver o protagonismo dos estudantes e potencializar o aprendizado, o desenvolvimento de habilidades e a percepção da importância do tema para suas vidas.
               </p>
-              <p className="text-base md:text-lg font-medium text-white">
-              Esse cenário reflete não apenas a dificuldade em gerenciar dívidas, mas também a falta de conhecimento sobre práticas financeiras saudáveis, como o orçamento familiar e a importância de poupar para emergências. A educação financeira nas escolas pode desempenhar um papel vital na inversão dessa situação, capacitando os jovens a tomarem decisões financeiras mais informadas e responsáveis.
-              </p>
+              
             </div>
           </motion.div>
         )}
@@ -115,6 +113,6 @@ const Modulo1Situacao = () => {
   )
 }
 
-export default Modulo1Situacao
+export default Modulo2Situacao
 
 

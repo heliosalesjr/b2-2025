@@ -2,21 +2,21 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
-import Modulo1ContentSection from "@/components/Modulo1ContentSection"
+import Modulo2ContentSection from "@/components/Modulo2ContentSection"
 
 
-export default function Modulo1() {
+export default function Modulo2() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <ProgressBar />
       <main >
       <Hero
-        title="O Módulo 1"
-        subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
+        title="O Módulo 2"
+        subtitle="Como planejar aulas e orientar os estudantes a realizar os projetos em sala de aula"
         />
         
-      <Modulo1ContentSection />
+      <Modulo2ContentSection />
 
       </main>
       <Footer />

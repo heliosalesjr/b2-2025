@@ -8,27 +8,23 @@ import { FaChalkboardTeacher, FaBookOpen, FaUsers, FaTools } from 'react-icons/f
 const objetivos = [
   {
     icon: <FaChalkboardTeacher size={32} className="text-blue-600" />,
-    title: 'Educação Financeira',
-    description: 'Entender por que é importante trabalhar a educação financeira em sala de aula.'
+    title: 'PPDA e PDA',
+    description: 'Entender o passo a passo e as etapas do PPDA e PDA'
   },
   {
     icon: <FaBookOpen size={32} className="text-red-500" />,
-    title: 'Conhecer a Coleção',
-    description: 'Conhecer a coleção Aprendendo a Lidar com Dinheiro.'
+    title: 'Matriz de habilidades',
+    description: 'Conhecer e interpretar a Matriz de habilidades (Quadro Geral das Etapas)'
   },
   {
     icon: <FaUsers size={32} className="text-green-500" />,
-    title: 'Diagnóstico da Turma',
-    description: 'Aprender a fazer o diagnóstico do perfil da turma.'
+    title: 'SMART e 5W2H',
+    description: 'Conhecer as  ferramentas SMART e 5W2H'
   },
-  {
-    icon: <FaTools size={32} className="text-yellow-400" />,
-    title: 'Ferramentas de Engajamento',
-    description: 'Conhecer ferramentas e atividades para o engajamento dos estudantes.'
-  }
+  
 ]
 
-const Modulo1Objetivos = () => {
+const Modulo2Objetivos = () => {
 
   const ref = useRef();
   const { markAsViewed } = useSidebar();
@@ -55,12 +51,12 @@ const Modulo1Objetivos = () => {
       <div className="flex items-center justify-center gap-3 mb-8">
         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
         <h2 className="text-4xl font-bold text-center text-slate-700">
-          Objetivos do Módulo
+          Objetivos do Módulo 2
         </h2>
         <div className="w-1 h-12 bg-gradient-to-b from-green-500 to-slate-500 rounded-full"></div>
       </div>
       
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {objetivos.map((obj, index) => (
           <div
             key={index}
@@ -76,4 +72,4 @@ const Modulo1Objetivos = () => {
   )
 }
 
-export default Modulo1Objetivos
+export default Modulo2Objetivos

@@ -1,24 +1,26 @@
 import { Button } from "@/components/ui/button"
 import FadeInWhenVisible from "./FadeInWhenVisible"
 import Link from "next/link"
-import EFIntro from "./content/EFIntro"
+import EFIntro from "./content/MatrizIntro"
 import EF2 from "./content/EF2"
 import EF3 from "./content/EF3"
 import EF4 from "./content/EF4"
 import EF5 from "./content/EF5"
+import MatrizIntro from "./content/MatrizIntro"
+import MatrizSmart from "./content/MatrizSmart"
 
-export default function EFContentSection() {
+export default function Matriz() {
     return (
       <section id="content" className="w-full py-12 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-5xl space-y-8">
 
             <FadeInWhenVisible>
-              <EFIntro />
+              <MatrizIntro />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-              <EF2 />
+              <MatrizSmart />
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>

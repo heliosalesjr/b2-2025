@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
-import ContentSection from "@/components/ContentSection"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
+import Modulo2ContentSection from "@/components/Modulo2ContentSection"
+
 
 export default function Home() {
   return (
@@ -11,14 +12,16 @@ export default function Home() {
       <ProgressBar />
       <main >
       <Hero
-          title="CURSO DE FORMAÇÃO"
-          subtitle="COLEÇÃO APRENDENDO A LIDAR COM DINHEIRO - BEĨ EDUCAÇÃO"
-          
+        title="CURSO DE FORMAÇÃO"
+        subtitle="Módulo 2 - Como planejar aulas e orientar os estudantes a realizar os projetos em sala de aula"
         />
-        <ContentSection />
+        
+      <Modulo2ContentSection />
+
       </main>
       <Footer />
     </div>
   )
 }
+
 
