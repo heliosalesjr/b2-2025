@@ -1,13 +1,9 @@
 import { Button } from "@/components/ui/button"
 import FadeInWhenVisible from "./FadeInWhenVisible"
 import Link from "next/link"
-import EFIntro from "./content/MatrizIntro"
-import EF2 from "./content/EF2"
-import EF3 from "./content/EF3"
-import EF4 from "./content/EF4"
-import EF5 from "./content/EF5"
+
 import MatrizIntro from "./content/MatrizIntro"
-import MatrizSmart from "./content/MatrizSmart"
+
 
 export default function Matriz() {
     return (
@@ -19,26 +15,11 @@ export default function Matriz() {
               <MatrizIntro />
             </FadeInWhenVisible>
 
-            <FadeInWhenVisible>
-              <MatrizSmart />
-            </FadeInWhenVisible>
-
-            <FadeInWhenVisible>
-              <EF3 />
-            </FadeInWhenVisible>
-
-            <FadeInWhenVisible>
-              <EF4 />
-            </FadeInWhenVisible>
-
-            <FadeInWhenVisible>
-              <EF5 />
-            </FadeInWhenVisible>
      
             
             <div className="flex justify-center mt-8">
               <Button asChild>
-                <Link href="/metodologias">Próxima Página: Metodologias</Link>
+                <Link href="/smart">Próxima Página: Ferramenta SMART</Link>
               </Button>
             </div>
           </div>

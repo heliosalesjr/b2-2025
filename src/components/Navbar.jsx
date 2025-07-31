@@ -16,9 +16,9 @@ export default function Navbar() {
     { name: "Móludo 2", href: "/" },
     
     { name: "Matriz de Habilidades", href: "/matriz" },
-    { name: "Ferramenta SMART", href: "/metodologias" },
-    { name: "Ferramenta 5W2H", href: "/material" },
-    { name: "Encerramento", href: "/diagnostico" },
+    { name: "Ferramenta SMART", href: "/smart" },
+    { name: "Ferramenta 5W2H", href: "/5wh2" },
+    { name: "Encerramento", href: "/encerramento" },
   ]
 
   useEffect(() => {

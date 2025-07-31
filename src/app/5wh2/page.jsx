@@ -2,24 +2,23 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
-//import EFContentSection from "@/components/EFContentSection"
-import Mat4 from "@/components/content/Mat4"
-import DiagnosticoContentSection from "@/components/DiagnosticoContentSection"
+import WhContentSection from "@/components/WhContentSection"
 
-export default function Diagnostico() {
+export default function Modulo4() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <ProgressBar />
       <main >
         <Hero
-                title="Diagnóstico e Encerramento"
+                title="Ferramenta 5W2H"
                 subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
                 />
-       
-       <DiagnosticoContentSection />
+        
+        <WhContentSection />
       </main>
       <Footer />
     </div>
   )
 }
+

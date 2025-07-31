@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react'
 import confetti from 'canvas-confetti'
 
 const checklistItems = [
-  'Entendi por que é importante trabalhar a educação financeira em sala de aula.',
-  'Conheci a coleção Aprendendo a Lidar com Dinheiro.',
-  'Aprendi a fazer o diagnóstico do perfil da turma.',
-  'Conheci ferramentas e atividades para o engajamento dos estudantes.',
+  'Entendi o passo a passo da elaboração de um PPDA.',
+  'Aprendi a interpretar a Matriz de habilidades (Quadro Geral das Etapas).',
+  'Conheci as ferramentas  SMART e 5W2H e suas aplicações em sala e com os projetos dos alunos.',
+  
 ]
 
-const Mat9 = () => {
+const EncerramentoAprendi = () => {
   const [checkedItems, setCheckedItems] = useState(Array(checklistItems.length).fill(false))
   const allChecked = checkedItems.every(Boolean)
 
@@ -71,4 +71,4 @@ const Mat9 = () => {
   )
 }
 
-export default Mat9
+export default EncerramentoAprendi

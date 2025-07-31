@@ -41,9 +41,9 @@ export default function Modulo2ContentSection() {
                 
                 
                 <div className="flex justify-center mt-8">
-                    <Button asChild className={"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"}>
-                    <Link href="/educacaofinanceira">Próxima Página: Educação Financeira</Link>
-                    </Button>
+                  <Button asChild>
+                    <Link href="/matriz">Próxima Página: Matriz de Habilidades</Link>
+                  </Button>
                 </div>
             
           </div>
