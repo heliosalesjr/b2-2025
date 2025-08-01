@@ -16,7 +16,7 @@ const Modulo2Situacao = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          markAsViewed('modulo-1-situacao');
+          markAsViewed('modulo-2-roteiro');
         }
       },
       { threshold: 0.5 }
@@ -34,7 +34,7 @@ const Modulo2Situacao = () => {
   return (
     <motion.div
       ref={ref} 
-      id="modulo-1-situacao"
+      id="modulo-2-roteiro"
       layout
       className="scroll-mt-20 relative w-full h-[70vh] rounded-2xl overflow-hidden shadow-2xl"
       transition={{ duration: 1.2 }}

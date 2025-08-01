@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useSidebar } from '@/contexts/SidebarContext';
 import confetti from "canvas-confetti";
 
 const perguntas = [
@@ -42,13 +43,36 @@ export default function WhGame() {
     setRespostas({});
     setMostrarResultado(false);
   };
+  
+  const ref = useRef();
+    const { markAsViewed } = useSidebar();
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            markAsViewed('ferramentas-5w2h-quiz');
+          }
+        },
+        { threshold: 0.5 }
+      );
+  
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+  
+      return () => observer.disconnect();
+    }, [markAsViewed]);
 
   return (
+    
+    
     <div
-      id="modulo-2-5w2h-game"
+      id="ferramentas-5w2h-quiz"
+      ref={ref}
       className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100 max-w-4xl mx-auto"
     >
-      <div className="flex items-center justify-center gap-3 mb-8">
+      <div className="scroll-mt-20 flex items-center justify-center gap-3 mb-8">
         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full" />
         <h2 className="text-4xl font-bold text-center text-slate-700">
           Relacione as perguntas do 5W2H às suas funções

@@ -1,12 +1,34 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+
+import { useSidebar } from '@/contexts/SidebarContext';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 const Mat8 = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('encerramento-intro');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="mt-8 bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
+    <div ref={ref} id="encerramento-intro" className="scroll-mt-20 mt-8 bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
       {/* Título */}
       <h2 className="text-2xl md:text-4xl font-bold text-slate-700">
         Encerrando o Módulo 2

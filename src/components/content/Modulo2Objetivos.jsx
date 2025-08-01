@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useSidebar } from '@/contexts/SidebarContext';
 
 import React from 'react'
-import { FaChalkboardTeacher, FaBookOpen, FaUsers, FaTools } from 'react-icons/fa'
+import { FaChalkboardTeacher, FaBookOpen, FaUsers } from 'react-icons/fa'
 
 const objetivos = [
   {
@@ -33,7 +33,7 @@ const Modulo2Objetivos = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          markAsViewed('modulo-1-objetivos');
+          markAsViewed('modulo-2-objetivos');
         }
       },
       { threshold: 0.5 }
@@ -47,7 +47,7 @@ const Modulo2Objetivos = () => {
   }, [markAsViewed]);
 
   return (
-    <div ref={ref} id="modulo-1-objetivos" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+    <div ref={ref} id="modulo-2-objetivos" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
       <div className="flex items-center justify-center gap-3 mb-8">
         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
         <h2 className="text-4xl font-bold text-center text-slate-700">

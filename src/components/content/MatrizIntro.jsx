@@ -6,6 +6,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const MatrizIntro = () => {
+  
   const ref = useRef(null);
   const { markAsViewed } = useSidebar();
 

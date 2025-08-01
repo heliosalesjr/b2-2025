@@ -17,7 +17,7 @@ const WhIntro = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          markAsViewed("modulo-2-5w2h");
+          markAsViewed("ferramentas-5w2h");
         }
       },
       { threshold: 0.5 }
@@ -33,7 +33,7 @@ const WhIntro = () => {
   return (
     <div
       ref={ref}
-      id="modulo-2-5w2h"
+      id="ferramentas-5w2h"
       className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100"
     >
       <div className="flex items-center justify-center gap-3 mb-8">

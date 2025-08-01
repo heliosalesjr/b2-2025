@@ -1,17 +1,42 @@
 "use client"
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import { motion } from "framer-motion"
 import { FaMagic } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 
 export default function ModeloPPDA() {
+
+  const ref = useRef();
+    const { markAsViewed } = useSidebar();
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            markAsViewed('modulo-2-modelo');
+          }
+        },
+        { threshold: 0.5 }
+      );
+  
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+  
+      return () => observer.disconnect();
+    }, [markAsViewed]);
+
   return (
     <motion.div
+      ref={ref} 
+      id="modulo-2-objetivos"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-white border border-blue-100 rounded-2xl shadow-lg p-8 text-center space-y-4"
+      className="scroll-mt-20 bg-white border border-blue-100 rounded-2xl shadow-lg p-8 text-center space-y-4"
     >
       <div className="flex justify-center text-blue-600">
         <FaMagic size={40} />
